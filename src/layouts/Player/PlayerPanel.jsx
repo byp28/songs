@@ -3,6 +3,7 @@ import NextButton from './NextButton'
 import { useSelector } from 'react-redux'
 import PreviousButton from './PreviousButton'
 import TogglePlayButton from './TogglePlayButton'
+import Progress from './Progress'
 
 export default function PlayerPanel() {
   const playlist = useSelector(state => state.playlist)
@@ -22,6 +23,7 @@ export default function PlayerPanel() {
         <TogglePlayButton/>
         <NextButton/>
       </div>
+      <Progress/>
     </div>
   )
 }

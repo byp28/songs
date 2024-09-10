@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { getMusicsData } from '../features/playlist'
+import { getMusicsData,SelectSong } from '../features/playlist'
+
 
 export default function Playlist() {
   const playlist = useSelector(state => state.playlist)
@@ -16,6 +17,7 @@ export default function Playlist() {
         <li
           key={song.id}
           className='p-2 border-2 font-semibold bg-indigo-100 hover:bg-indigo-200 text-slate-800 mb-3 rounded cursor-pointer'
+          onClick={()=>dispatch(SelectSong(song.id))}
         >
           <span>{song.title} - </span>
           <span>{song.artist}</span>
