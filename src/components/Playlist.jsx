@@ -12,11 +12,11 @@ export default function Playlist() {
   }
   
   return (
-    <ul className='mt-4 pb-[300px]'>
+    <ul className='flex flex-col'>
       {playlist?.songs?.length && playlist.songs.map(song =>(
         <li
           key={song.id}
-          className='p-2 border-2 font-semibold bg-indigo-100 hover:bg-indigo-200 text-slate-800 mb-3 rounded cursor-pointer'
+          className='p-3 font-semibold bg-[#202020] hover:bg-[#282828] text-white mb-3 rounded cursor-pointer'
           onClick={()=>dispatch(SelectSong(song.id))}
         >
           <span>{song.title} - </span>
