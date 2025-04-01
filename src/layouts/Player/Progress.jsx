@@ -32,7 +32,7 @@ export default function Progress() {
 
         </div>
       </div>
-      <div className='flex justify-between'>
+      <div className='flex justify-between text-white'>
         <span>{formatValue(progress.current)}</span>
         <span>{formatValue(progress.totalDuration)}</span>
       </div>
